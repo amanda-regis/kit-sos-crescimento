@@ -1,0 +1,118 @@
+/* Definindo as novas fontes */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Cabeçalho e rodapé com degradê */
+header, footer {
+    background: linear-gradient(45deg, #aa2e2e, #ff6347);
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Container principal */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+/* Seção principal com layout em linha */
+.main-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* Coluna das Imagens */
+.image-column {
+    text-align: center;
+    flex: 1;
+}
+
+.image-column img {
+    max-width: 80%; /* Ajusta o tamanho das imagens */
+    height: auto;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.image-column img:hover {
+    transform: scale(1.05);
+}
+
+/* Caixa de texto dinâmica com borda */
+.text-box {
+    flex: 1;
+    padding: 20px;
+    border-radius: 15px;
+    border: 2px solid #aa2e2e; /* Borda colorida */
+    background-color: transparent; /* Fundo transparente */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+    max-width: 300px;
+}
+
+/* Setas direcional esquerda */
+.arrow-left {
+    position: absolute;
+    left: -40px;
+    top: 50%;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 20px solid #aa2e2e; /* Cor da seta */
+}
+
+/* Setas direcional direita */
+.arrow-right {
+    position: absolute;
+    right: -40px;
+    top: 50%;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 20px solid #aa2e2e; /* Cor da seta */
+}
+
+/* Botão de Ação Centralizado e Maior */
+.button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #d32f2f;
+    color: #fff;
+    font-size: 22px;
+    padding: 20px 40px;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button:hover {
+    background-color: #aa2e2e;
+    transform: scale(1.05);
+}
+
+/* Estilização do rodapé */
+footer {
+    margin-top: 30px; /* Aumenta o espaçamento para mais equilíbrio */
+    background: linear-gradient(45deg, #aa2e2e, #ff6347);
+    color: #fff;
+}
