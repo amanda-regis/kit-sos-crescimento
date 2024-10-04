@@ -1,4 +1,4 @@
-/* Definindo as novas fontes */
+/* Definindo as fontes e cores base */
 body {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
@@ -38,7 +38,7 @@ header, footer {
 }
 
 .image-column img {
-    max-width: 80%; /* Ajusta o tamanho das imagens */
+    max-width: 75%; /* Ajusta o tamanho das imagens */
     height: auto;
     margin: 10px;
     border-radius: 10px;
@@ -115,4 +115,48 @@ footer {
     margin-top: 30px; /* Aumenta o espaçamento para mais equilíbrio */
     background: linear-gradient(45deg, #aa2e2e, #ff6347);
     color: #fff;
+}
+
+/* Media Queries para responsividade */
+@media (max-width: 768px) {
+    .main-content {
+        flex-direction: column;
+    }
+
+    .image-column img {
+        max-width: 50%;
+    }
+
+    .text-box {
+        margin: 20px 0;
+    }
+
+    .arrow-left, .arrow-right {
+        display: none; /* Esconde as setas em telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    header, footer {
+        padding: 10px 0;
+    }
+
+    .image-column img {
+        max-width: 70%;
+    }
+
+    .text-box {
+        max-width: 100%;
+        border: none; /* Remove borda para simplificar em telas pequenas */
+        box-shadow: none;
+    }
+
+    .cta-button {
+        font-size: 18px;
+        padding: 15px 30px;
+    }
+
+    .arrow-left, .arrow-right {
+        display: none; /* Mantém as setas ocultas */
+    }
 }
