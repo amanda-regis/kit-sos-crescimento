@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presell Kit S.O.S Crescimento</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+
+        /* Fundo desfocado */
+        .background-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('banner.jpg') no-repeat center center fixed;
+            background-size: cover;
+            filter: blur(5px); /* Desfoque aplicado apenas ao fundo */
+            z-index: -1; /* Fica atrás do pop-up */
+        }
+
+        .popup-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .popup {
+            position: relative;
+            background-color: white;
+            padding: 25px;
+            width: 100%;
+            max-width: 450px; /* Tamanho do pop-up */
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+            transform: scale(0.8);
+            animation: popupFadeIn 0.5s forwards ease-out;
+            z-index: 10;
+        }
+
+        @keyframes popupFadeIn {
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .popup p {
+            font-size: 20px; /* Tamanho maior para chamar mais atenção */
+            margin-bottom: 25px;
+            font-family: 'Arial Black', sans-serif; /* Fonte mais chamativa */
+            color: #333;
+        }
+
+        .popup button {
+            width: 80%;
+            padding: 15px;
+            font-size: 18px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out; /* Efeito de transição */
+        }
+
+        .popup button:hover {
+            transform: scale(1.1); /* Aumenta o botão no hover */
+            background-color: #218838;
+        }
+
+        @media (max-width: 768px) {
+            .popup {
+                width: 95%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Fundo com desfoque -->
+    <div class="background-container"></div>
+
+    <!-- Container do pop-up -->
+    <div class="popup-container" onclick="redirectToPage()">
+        <div class="popup" onclick="event.stopPropagation();">
+            <p>Você recebeu um cupom de desconto exclusivo.</p>
+            <button onclick="redirectToPage()">Garanta já</button>
+        </div>
+    </div>
+
+    <script>
+        function redirectToPage() {
+            window.location.href = 'https://app.monetizze.com.br/r/AYE24790760';
+        }
+    </script>
+</body>
+</html>
